@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { StarIcon } from "lucide-react";
+import { StarIcon, StarOffIcon } from "lucide-react";
 import { Spinner } from "flowbite-react";
 import { getReviewByMovieId } from "../utilitaries/Recomendacao";
 
@@ -79,14 +79,14 @@ function PaginaFilme() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-10 text-white">
       {userReview?.rating && (
-        <div className="flex items-center gap-2 mt-2">
-          <StarIcon className="text-yellow-400 w-5 h-5" />
+        <div className="flex items-center gap-2 mt-1">
+          <StarIcon fill="#facc15" className="text-yellow-400 w-5 h-5" />
           <span className="text-yellow-400 font-semibold">
             Sua nota: {userReview.rating}
           </span>
         </div>
       )}
-      <div className="flex gap-8">
+      <div className="flex gap-8 md:flex-row flex-col">
         <img
           className="w-72 rounded-lg"
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -106,10 +106,10 @@ function PaginaFilme() {
                 {genre.name}
               </span>
             ))}
-            <div className="flex ml-1 relative mt-1">
-              <StarIcon className="inline w-5 h-5 text-yellow-400 mr-2" />
+            <div className="flex ml-1 relative mt-0.5">
+              <StarIcon fill="#facc15" className="inline w-6 h-6 text-yellow-400 " />
 
-              <p className="text-cyan-50 font-medium absolute left-7 bottom-0.5   ">
+              <p className="text-cyan-50 font-medium absolute left-7 bottom-0">
                 {movie.vote_average ? movie.vote_average.toFixed(1) : "N/A"}
               </p>
             </div>
@@ -126,26 +126,19 @@ function PaginaFilme() {
               onClick={() => handleRate(star)}
               className="transition-transform hover:scale-110 cursor-pointer"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill={star <= rating ? "#facc15" : "none"}
-                viewBox="0 0 24 24"
-                stroke="#facc15"
-                className="w-8 h-8"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.5.04.702.663.32.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0l-4.725 2.885a.562.562 0 01-.84-.61l1.285-5.385a.563.563 0 00-.182-.557L2.044 9.385c-.382-.325-.18-.948.32-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
-                />
-              </svg>
+               
+                <StarIcon
+                className="w-7 h-7"
+                 fill={star <= rating ? "#facc15" : "none"}
+                 strokeWidth={2} 
+                 color="#facc15"/>
+              
             </button>
           ))}
         </div>
       </div>
       <div className="space-y-2 mt-4">
-        <label className="text-slate-100 text-sm">
+        <label className="text-slate-100">
           O que você achou do filme?
         </label>
         

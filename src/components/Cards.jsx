@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { getReviewByMovieId } from "../utilitaries/Recomendacao";
 
 function Cards({
-  filme: { title, poster_path, overview, release_date, vote_average, id, }, variant = "grid",
+  filme: { title, poster_path, release_date, vote_average, id, }, variant = "grid",
 }) {
   const isRow = variant === "row";
   const formatReleaseDate = (release_date) => {
@@ -42,7 +42,7 @@ function Cards({
       <div className="mt-2 space-y-1.5">
         <h2 className="text-cyan-50 text-center">{title}</h2>
         <div className="flex text-left items-center justify-center space-x-2.5">
-          <StarIcon className="inline w-5 h-5 text-yellow-400 mr-2" />
+          <StarIcon fill="#facc15" className="inline w-5 h-5 text-yellow-400 mb-0.5 mr-2" />
           <p className="text-cyan-50 font-medium">{vote_average ? vote_average.toFixed(1) : "N/A"}</p>
           <span className="text-cyan-50">•</span>
           <p className="text-cyan-50 text-sm font-medium">{formatReleaseDate(release_date)}</p>

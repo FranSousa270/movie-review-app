@@ -123,9 +123,9 @@ function Home() {
   }, []);
 
   return (
-    <main className="w-full min-h-screen bg-gradient-to-b  from-sky-950 to-slate-900 font-noto-sans flex ">
+    <main className="w-full min-h-screen bg-gradient-to-b  from-sky-950 to-slate-900 font-noto-sans flex"> 
       <div className="mb-20 max-w-6xl mx-auto space-y-4   px-4">
-        <header className="text-red-100  font-bold flex flex-col justify-center items-center space-y-10 relative">
+        <header className="text-red-100  font-bold flex flex-col justify-center items-center space-y-10 relative ">
           <img className="w-[450px]" src={banner} alt="Banner" />
           <h1 className="text-4xl top-90 bottom-0 left-0 right-0 absolute text-center">
             Avalie Seus Filmes com{" "}
