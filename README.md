@@ -21,10 +21,12 @@ Os gêneros mais frequentes são usados para buscar novos filmes via API
 Os filmes recomendados aparecem automaticamente na Home
 
 # Tecnologias Utilizadas
+
 React
 Tailwind CSS
 Vite
 
 # Próximas Melhorias 
+
 Integração com Firebase (Auth + Firestore)
 Histórico de avaliações por usuário
