@@ -15,7 +15,7 @@ O projeto consome a API do TMDB (The Movie Database) e utiliza conceitos moderno
 
 ## Lógica de Recomendação
 - As recomendações são geradas a partir das avaliações do usuário:
-- O usuário avalia filmes e quanto maior a nota mais o filme e o genêro dele são levados em conta
+- O usuário avalia filmes e quanto maior a nota mais o filme e o gênero dele são levados em conta
 - Os gêneros desses filmes são contabilizados
 - Os gêneros mais frequentes são usados para buscar novos filmes via API
 - Os filmes recomendados aparecem automaticamente na Home
