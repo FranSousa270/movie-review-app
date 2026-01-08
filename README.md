@@ -1,16 +1,30 @@
-# React + Vite
+# Movie Review App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web desenvolvida em React que permite aos usuários explorar filmes, avaliar, escrever reviews e receber recomendações personalizadas por gênero, tudo isso sem necessidade de login.
+O projeto consome a API do TMDB (The Movie Database) e utiliza conceitos modernos do React, como hooks, componentização, rotas e armazenamento local.
 
-Currently, two official plugins are available:
+# Funcionalidades 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Pesquisa de filmes em tempo real
+Avaliação de filmes (1 a 5 estrelas)
+Escrita e salvamento de reviews
+Página individual para cada filme
+Sistema de recomendação baseado nos gêneros mais bem avaliados pelo usuário
+Carrosséis com top rated, tendências da semana, recomendados
+Persistência de dados com localStorage
 
-## React Compiler
+# Lógica de Recomendação
+As recomendações são geradas a partir das avaliações do usuário:
+O usuário avalia filmes e quanto maior a nota mais o filme e o genêro dele são levados em conta
+Os gêneros desses filmes são contabilizados
+Os gêneros mais frequentes são usados para buscar novos filmes via API
+Os filmes recomendados aparecem automaticamente na Home
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Tecnologias Utilizadas
+React
+Tailwind CSS
+Vite
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Próximas Melhorias 
+Integração com Firebase (Auth + Firestore)
+Histórico de avaliações por usuário
