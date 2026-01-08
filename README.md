@@ -22,6 +22,7 @@ O projeto consome a API do TMDB (The Movie Database) e utiliza conceitos moderno
 
 ## Tecnologias Utilizadas
 - React
+- Javascript
 - Tailwind CSS
 - Vite
 
